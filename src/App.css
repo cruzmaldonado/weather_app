@@ -70,5 +70,8 @@ li{
 }
 i{
     font-size: 1.3rem;
+    display: inline-block;
+    margin-right: 10px;
+    
 }
 

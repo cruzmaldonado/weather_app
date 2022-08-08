@@ -28,12 +28,9 @@ const CardWeather = ({coordinate}) => {
         }
     },[coordinate,temperature])
            
-          console.log(weather?.main)
-
     const changeOfUnit=()=> setTemperature(!temperature)
     if(isLoading){
         return <LoadingScreen/>
-        
     }
     else{
     
@@ -50,14 +47,15 @@ const CardWeather = ({coordinate}) => {
         <div className='card__info'>
         <h3>&#34;{weather && weather.weather[0].description}&#34;</h3>
         <ul>
-        <li><span>
+        <li>
+          <span>
         <i className="fa-solid fa-wind"></i>
          wind speed:{weather?.wind.speed}m/s</span></li>
         <li><span>
-        <i class="fa-solid fa-cloud"></i>       
+        <i className="fa-solid fa-cloud"></i>       
          clouds: {weather?.clouds.all}%</span></li>
         <li><span>
-        <i class="fa-solid fa-thermometer"></i>
+        <i className="fa-solid fa-thermometer"></i>
          pressure: {weather?.main.pressure} hPa</span></li>
         </ul>
         </div>       
