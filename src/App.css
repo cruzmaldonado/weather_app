@@ -21,13 +21,54 @@ h1,h2{
 }
 .card{
     width: 500px;
-    height:600px;
+    height:500px;
     border-radius: 20px;
-    background-color: white;
+    background-color:#e3e3e3;
     display: flex;
-    flex-wrap:wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding:0;
+    color: #9f7dd3 ;
+    font-size: 1.2rem;
+    box-shadow:5px 5px 10px #005;
+}
+.card:hover{
+    box-shadow: 0 0 5px #000;
+    transition:box-shadow 400ms;
+  }
+
+.card__detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card__button{
+  background-color:  #7735ef ;
+  color:white;
+  border:0;
+  width:30%;
+  height: 25px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #000;
+}
+.card__button:hover{
+    box-shadow: 0 0 5px #000;
+    transition:box-shadow 200ms;
+  }
+
+li{
+    list-style: none;
+    margin-top: 5px;
+    padding: 0;
+}
+i{
+    font-size: 1.3rem;
 }
 

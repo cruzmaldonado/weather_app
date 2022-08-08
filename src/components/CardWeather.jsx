@@ -45,18 +45,25 @@ const CardWeather = ({coordinate}) => {
     <div className="card__detail">
         <div className='card__image'>
         <img src={weather && `http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="weather" />
+        <h2 className='card__temperature'>{temperature? weather?.main.temp +"°K":weather?.main.temp +"°F"}</h2>
       </div>
         <div className='card__info'>
         <h3>&#34;{weather && weather.weather[0].description}&#34;</h3>
         <ul>
-        <li><span>wind speed:{weather?.wind.speed}m/s</span></li>
-        <li><span>clouds:{weather?.clouds.all}%</span></li>
-        <li><span>pressure: {weather?.main.pressure} hPa</span></li>
+        <li><span>
+        <i className="fa-solid fa-wind"></i>
+         wind speed:{weather?.wind.speed}m/s</span></li>
+        <li><span>
+        <i class="fa-solid fa-cloud"></i>       
+         clouds: {weather?.clouds.all}%</span></li>
+        <li><span>
+        <i class="fa-solid fa-thermometer"></i>
+         pressure: {weather?.main.pressure} hPa</span></li>
         </ul>
         </div>       
     </div>
-    <h2>{temperature? weather?.main.temp +"°K":weather?.main.temp +"°F"}</h2>
-    <button onClick={changeOfUnit}>{temperature? "chance to °F":"chance to °K"}</button>
+    
+    <button onClick={changeOfUnit} className="card__button button">{temperature? "chance to °F":"chance to °K"}</button>
 
 
 </article>
